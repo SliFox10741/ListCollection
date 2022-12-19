@@ -7,7 +7,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         String input = null;
         String product = null;
-        ArrayList products = new ArrayList<>();
+        ArrayList<String> products = new ArrayList<>();
 
         System.out.println("""
                 Список операций:\s
@@ -62,7 +62,7 @@ public class Main {
                     String itemLower = null;
                     System.out.println("Найдено: \n");
                     for (int i = 0; i < products.size(); i++) {
-                        itemLower = (String) products.get(i);
+                        itemLower = products.get(i);
                         itemLower = itemLower.toLowerCase();
                         if (itemLower.contains(queryLower)) {
                             System.out.println((i + 1) + ". " + products.get(i));
